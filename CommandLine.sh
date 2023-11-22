@@ -1,10 +1,11 @@
 #!/bin/bash
 
-# Merge course_i.tsv files
-cat TSV/course_*.tsv | tr -d '\000' | sort -u > merged_courses.tsv
-
-# Concatenate column_names.tsv and merged_courses.tsv
-cat TSV/column_names.tsv merged_courses.tsv > merged_courses.tsv
+# concatenates all the TSV files into a single file named merged_courses.tsv.
+cat course_*.tsv > merged_courses.tsv
+# use awk to remove duplicate header lines. It keeps only the first occurrence of each line. The result is saved in the file final_merged_courses.tsv.
+awk '!a[$0]++' merged_courses.tsv > final_merged_courses.tsv
+# concatenate column_names.tsv and merged_courses.tsv to add column names to the final file
+cat column_names.tsv final_merged_courses.tsv > merged_courses.tsv
 
 # Set LANG to C to ensure a consistent interpretation of bytes
 export LANG=C
@@ -32,17 +33,3 @@ echo "Number of colleges offer Part-Time education: $num_part_time_colleges"
 engineering_courses=$(awk -F '\t' '$1 ~ /Engineering|Engineer/ {print}' merged_courses.tsv | wc -l)
 percentage=$(awk "BEGIN {printf \"%.2f\", ($engineering_courses / 6000) * 100}")
 echo "3. Percentage of courses in Engineering: $percentage%"
-
-
-
-
-
-
-
-
-
-
-
-
-
-

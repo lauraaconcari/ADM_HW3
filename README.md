@@ -14,7 +14,7 @@ Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–
 
     ### 1. Data collection
 
-    In this response, we focus on implementing a data collection process to build a corpus of documents centered around master's degree programs. The approach involves breaking down the tasks into distinct modules, such as scrape_urls.py and download_html.py for web scraping master's degree information, ```extract_msc_page.py``` for extracting relevant details from HTML contents, and ```engine.py``` for orchestrating the entire process. 
+    In this response, we focus on implementing a data collection process to build a corpus of documents centered around master's degree programs. The approach involves breaking down the tasks into distinct modules, such as ```scrape_urls.py``` and ```download_html.py``` for web scraping master's degree information, ```extract_msc_page.py``` for extracting relevant details from HTML contents, and ```engine.py``` for orchestrating the entire process. 
 
     * **Get the list of master's degree courses**
     
@@ -24,12 +24,12 @@ Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–
 
         In this section, the focus is on crawling the master's degree pages corresponding to the URLs obtained from the first 400 pages. The process involves:
 
-        - Downloading the HTML content of each collected URL immediately after retrieving it using download_html.py module, into a file to prevent data loss in case the program stops for any reason.
-        - Organizing the downloaded HTML pages into folders using create_folders.py module, 15 in each folder to preserve the order in which the courses appear on the scraped website.
+        - Downloading the HTML content of each collected URL immediately after retrieving it using ```download_html.py``` module, into a file to prevent data loss in case the program stops for any reason.
+        - Organizing the downloaded HTML pages into folders using ```create_folders.py``` module, 15 in each folder to preserve the order in which the courses appear on the scraped website.
 
     * **Parse downloaded pages** 
 
-        At this stage, all HTML documents related to the master's degree programs have been acquired, and the next step is to extract specific information by using extract_msc_page.py module. The desired information for each course with their respective formats are as follows:
+        At this stage, all HTML documents related to the master's degree programs have been acquired, and the next step is to extract specific information by using ```extract_msc_page.py``` module. The desired information for each course with their respective formats are as follows:
 
             Course Name: string;
             University: string; 

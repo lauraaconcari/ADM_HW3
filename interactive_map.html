@@ -1,0 +1,2947 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3d81440dc27ceb960a4595297f1c34a3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-tag-filter-button/src/leaflet-tag-filter-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/css-ripple-effect@1.0.5/dist/ripple.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3d81440dc27ceb960a4595297f1c34a3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3d81440dc27ceb960a4595297f1c34a3 = L.map(
+                "map_3d81440dc27ceb960a4595297f1c34a3",
+                {
+                    center: [51.7548, 2.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_3d81440dc27ceb960a4595297f1c34a3);
+
+            
+
+        
+    
+            var tile_layer_9f912ad287fa6aa0d02323a210bd040b = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+                tile_layer_9f912ad287fa6aa0d02323a210bd040b.addTo(map_3d81440dc27ceb960a4595297f1c34a3);
+    
+            var marker_cluster_ee993cca0222d188d889504a95afaf3e = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_95b19dcde3ee788efad09e7f9fad7c0d = L.marker(
+                [40.8927159, 29.3786332],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_54701cf9605996bfc9df5efe2d3e511e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_95b19dcde3ee788efad09e7f9fad7c0d.setIcon(icon_54701cf9605996bfc9df5efe2d3e511e);
+        
+    
+        var popup_5328fefff6fcd4430b0354664393a5d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d8f8557bd4159225f127c1926a0530b = $(`<div id="html_4d8f8557bd4159225f127c1926a0530b" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science MSc   Annual Fees:  17848 €</div>`)[0];
+                popup_5328fefff6fcd4430b0354664393a5d4.setContent(html_4d8f8557bd4159225f127c1926a0530b);
+            
+        
+
+        marker_95b19dcde3ee788efad09e7f9fad7c0d.bindPopup(popup_5328fefff6fcd4430b0354664393a5d4)
+        ;
+
+        
+    
+    
+            marker_95b19dcde3ee788efad09e7f9fad7c0d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_44a836bb32b8dc4c5078e7f9c8d3ffb9 = L.marker(
+                [52.5908309, -2.1275588],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_154c7ebc2797707479af57a980abf0d5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_44a836bb32b8dc4c5078e7f9c8d3ffb9.setIcon(icon_154c7ebc2797707479af57a980abf0d5);
+        
+    
+        var popup_ab5f4e31fce56068e9ff5aeb691bc0b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4b7b148c31ada37eabf7916a87adefc = $(`<div id="html_c4b7b148c31ada37eabf7916a87adefc" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science MSc   Annual Fees:  17791 €</div>`)[0];
+                popup_ab5f4e31fce56068e9ff5aeb691bc0b6.setContent(html_c4b7b148c31ada37eabf7916a87adefc);
+            
+        
+
+        marker_44a836bb32b8dc4c5078e7f9c8d3ffb9.bindPopup(popup_ab5f4e31fce56068e9ff5aeb691bc0b6)
+        ;
+
+        
+    
+    
+            marker_44a836bb32b8dc4c5078e7f9c8d3ffb9.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ddf931749d7a6cb7dade6f5d870b25ac = L.marker(
+                [53.21917, 6.56667],
+                {"tags": ["5000 to 10000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_b7f2c570b5091cd955d9e85002519db2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_ddf931749d7a6cb7dade6f5d870b25ac.setIcon(icon_b7f2c570b5091cd955d9e85002519db2);
+        
+    
+        var popup_9008a045218a3c5d836b6a2dd3243556 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a8584ddb95d1fdd38740c2116a15781 = $(`<div id="html_5a8584ddb95d1fdd38740c2116a15781" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science for Life Sciences   Annual Fees:  8276 €</div>`)[0];
+                popup_9008a045218a3c5d836b6a2dd3243556.setContent(html_5a8584ddb95d1fdd38740c2116a15781);
+            
+        
+
+        marker_ddf931749d7a6cb7dade6f5d870b25ac.bindPopup(popup_9008a045218a3c5d836b6a2dd3243556)
+        ;
+
+        
+    
+    
+            marker_ddf931749d7a6cb7dade6f5d870b25ac.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d87c71d74d39c567d108c063fdce426b = L.marker(
+                [60.1756483, 24.95355],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_0cb6c3c71cf4c4b58905a013bf0e9366 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_d87c71d74d39c567d108c063fdce426b.setIcon(icon_0cb6c3c71cf4c4b58905a013bf0e9366);
+        
+    
+        var popup_1b628286da40038a53320afce1d37400 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6996b1a4e193d814372406fe970be7f8 = $(`<div id="html_6996b1a4e193d814372406fe970be7f8" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science - MSc   Annual Fees:  15000 €</div>`)[0];
+                popup_1b628286da40038a53320afce1d37400.setContent(html_6996b1a4e193d814372406fe970be7f8);
+            
+        
+
+        marker_d87c71d74d39c567d108c063fdce426b.bindPopup(popup_1b628286da40038a53320afce1d37400)
+        ;
+
+        
+    
+    
+            marker_d87c71d74d39c567d108c063fdce426b.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_46e16c1dc364f9a1c31d29d1b401fdb1 = L.marker(
+                [56.3398198, -2.8117937],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_e444d5446f61ba30fcbf0cdc5abf4879 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_46e16c1dc364f9a1c31d29d1b401fdb1.setIcon(icon_e444d5446f61ba30fcbf0cdc5abf4879);
+        
+    
+        var popup_8fa7b32b5fbc140ad559d8af60585675 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_97c8ec8a98e8fc288eb7484706a2fe41 = $(`<div id="html_97c8ec8a98e8fc288eb7484706a2fe41" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science (PGCert/PGDip/MSc) - online   Annual Fees:  20727 €</div>`)[0];
+                popup_8fa7b32b5fbc140ad559d8af60585675.setContent(html_97c8ec8a98e8fc288eb7484706a2fe41);
+            
+        
+
+        marker_46e16c1dc364f9a1c31d29d1b401fdb1.bindPopup(popup_8fa7b32b5fbc140ad559d8af60585675)
+        ;
+
+        
+    
+    
+            marker_46e16c1dc364f9a1c31d29d1b401fdb1.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b6162d9ab789a2e90542a0a0ef14c1d7 = L.marker(
+                [41.66667, 2.0],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_293282d44167ca2bb046e1a00cf1f6da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_b6162d9ab789a2e90542a0a0ef14c1d7.setIcon(icon_293282d44167ca2bb046e1a00cf1f6da);
+        
+    
+        var popup_cc1be88ec22b987322ca20240ba80258 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6048248419165eaab29ed59e271973b = $(`<div id="html_c6048248419165eaab29ed59e271973b" style="width: 100.0%; height: 100.0%;">Course Name:  Master's of Data Science   Annual Fees:  29900 €</div>`)[0];
+                popup_cc1be88ec22b987322ca20240ba80258.setContent(html_c6048248419165eaab29ed59e271973b);
+            
+        
+
+        marker_b6162d9ab789a2e90542a0a0ef14c1d7.bindPopup(popup_cc1be88ec22b987322ca20240ba80258)
+        ;
+
+        
+    
+    
+            marker_b6162d9ab789a2e90542a0a0ef14c1d7.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cc3388f0629821e0a6d43c1104430fff = L.marker(
+                [51.5072648, -0.1278328],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_bc83cc406329a5ae587bc63e09c25cca = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_cc3388f0629821e0a6d43c1104430fff.setIcon(icon_bc83cc406329a5ae587bc63e09c25cca);
+        
+    
+        var popup_9d0c5cc768b5a81afab75c3c8643463e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1096fa54237866367b23f75f3376534a = $(`<div id="html_1096fa54237866367b23f75f3376534a" style="width: 100.0%; height: 100.0%;">Course Name:  MSc Data Science   Annual Fees:  11227 €</div>`)[0];
+                popup_9d0c5cc768b5a81afab75c3c8643463e.setContent(html_1096fa54237866367b23f75f3376534a);
+            
+        
+
+        marker_cc3388f0629821e0a6d43c1104430fff.bindPopup(popup_9d0c5cc768b5a81afab75c3c8643463e)
+        ;
+
+        
+    
+    
+            marker_cc3388f0629821e0a6d43c1104430fff.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_003db30c5d9b3246618a09dfe3405825 = L.marker(
+                [51.88921, 0.90421],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_4e1a98563a2b3147686df78de7ae80b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_003db30c5d9b3246618a09dfe3405825.setIcon(icon_4e1a98563a2b3147686df78de7ae80b1);
+        
+    
+        var popup_b109ca63cc9bfce412138593153715db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd08271b5f81f93cff3af7167db9d95d = $(`<div id="html_cd08271b5f81f93cff3af7167db9d95d" style="width: 100.0%; height: 100.0%;">Course Name:  MSc Data Science   Annual Fees:  14311 €</div>`)[0];
+                popup_b109ca63cc9bfce412138593153715db.setContent(html_cd08271b5f81f93cff3af7167db9d95d);
+            
+        
+
+        marker_003db30c5d9b3246618a09dfe3405825.bindPopup(popup_b109ca63cc9bfce412138593153715db)
+        ;
+
+        
+    
+    
+            marker_003db30c5d9b3246618a09dfe3405825.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d1fb475a199b3f1d88b6d18146ba4567 = L.marker(
+                [51.5007679, -2.5503106],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_c6a73b8480a9fbef12463caf448b5056 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_d1fb475a199b3f1d88b6d18146ba4567.setIcon(icon_c6a73b8480a9fbef12463caf448b5056);
+        
+    
+        var popup_8e067e0971dbe428aa4ba5025cda740b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f8e47a1adb873b553dfd9b6df122ca2 = $(`<div id="html_4f8e47a1adb873b553dfd9b6df122ca2" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science - MSc   Annual Fees:  10363 €</div>`)[0];
+                popup_8e067e0971dbe428aa4ba5025cda740b.setContent(html_4f8e47a1adb873b553dfd9b6df122ca2);
+            
+        
+
+        marker_d1fb475a199b3f1d88b6d18146ba4567.bindPopup(popup_8e067e0971dbe428aa4ba5025cda740b)
+        ;
+
+        
+    
+    
+            marker_d1fb475a199b3f1d88b6d18146ba4567.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f1e4ce1eb8c7fcc0937286c0b9b7588c = L.marker(
+                [51.7517443, -0.2390498],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_bd0c76dac743b70f26ed189f8fe1d067 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_f1e4ce1eb8c7fcc0937286c0b9b7588c.setIcon(icon_bd0c76dac743b70f26ed189f8fe1d067);
+        
+    
+        var popup_aa59cb8a6bcb6dac6739777a1f65b67c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d4906eb6e20c0b0a84db7c0fcf928cc = $(`<div id="html_9d4906eb6e20c0b0a84db7c0fcf928cc" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science - MSc   Annual Fees:  16985 €</div>`)[0];
+                popup_aa59cb8a6bcb6dac6739777a1f65b67c.setContent(html_9d4906eb6e20c0b0a84db7c0fcf928cc);
+            
+        
+
+        marker_f1e4ce1eb8c7fcc0937286c0b9b7588c.bindPopup(popup_aa59cb8a6bcb6dac6739777a1f65b67c)
+        ;
+
+        
+    
+    
+            marker_f1e4ce1eb8c7fcc0937286c0b9b7588c.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e07c30aec62b8f4c4422f1b1928ea7dc = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_ff048b5ec437ec9f279413ad9c991c11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_e07c30aec62b8f4c4422f1b1928ea7dc.setIcon(icon_ff048b5ec437ec9f279413ad9c991c11);
+        
+    
+        var popup_3acdbfea17fbf20ebe21900cc1a7ac92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a5cb81b23aa6c7e4cf4b5ae67b5b08eb = $(`<div id="html_a5cb81b23aa6c7e4cf4b5ae67b5b08eb" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Public Policy (Political Science) MSc   Annual Fees:  36964 €</div>`)[0];
+                popup_3acdbfea17fbf20ebe21900cc1a7ac92.setContent(html_a5cb81b23aa6c7e4cf4b5ae67b5b08eb);
+            
+        
+
+        marker_e07c30aec62b8f4c4422f1b1928ea7dc.bindPopup(popup_3acdbfea17fbf20ebe21900cc1a7ac92)
+        ;
+
+        
+    
+    
+            marker_e07c30aec62b8f4c4422f1b1928ea7dc.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ce1b0a668c304835272dee2cd6624cf = L.marker(
+                [53.8067743, -1.5562878],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_08422aab05f5903123b68e6fcda1b88f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_1ce1b0a668c304835272dee2cd6624cf.setIcon(icon_08422aab05f5903123b68e6fcda1b88f);
+        
+    
+        var popup_6736fd933c2be2cef83db8c5b8857e5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_09cfd4bb2a09b8fa6261514df9ef5b71 = $(`<div id="html_09cfd4bb2a09b8fa6261514df9ef5b71" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Analytics - MSc   Annual Fees:  36561 €</div>`)[0];
+                popup_6736fd933c2be2cef83db8c5b8857e5c.setContent(html_09cfd4bb2a09b8fa6261514df9ef5b71);
+            
+        
+
+        marker_1ce1b0a668c304835272dee2cd6624cf.bindPopup(popup_6736fd933c2be2cef83db8c5b8857e5c)
+        ;
+
+        
+    
+    
+            marker_1ce1b0a668c304835272dee2cd6624cf.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3f1ec4e6dd734be2cb82f1e0d4b06c95 = L.marker(
+                [56.3398198, -2.8117937],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_f310378a4d62a53b9796d1b492cf700a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_3f1ec4e6dd734be2cb82f1e0d4b06c95.setIcon(icon_f310378a4d62a53b9796d1b492cf700a);
+        
+    
+        var popup_1571de86659cc70d35315e174a430d7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67b0400fea770280e1529a1876dd04b7 = $(`<div id="html_67b0400fea770280e1529a1876dd04b7" style="width: 100.0%; height: 100.0%;">Course Name:  Health Data Science (MSc)   Annual Fees:  31356 €</div>`)[0];
+                popup_1571de86659cc70d35315e174a430d7a.setContent(html_67b0400fea770280e1529a1876dd04b7);
+            
+        
+
+        marker_3f1ec4e6dd734be2cb82f1e0d4b06c95.bindPopup(popup_1571de86659cc70d35315e174a430d7a)
+        ;
+
+        
+    
+    
+            marker_3f1ec4e6dd734be2cb82f1e0d4b06c95.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_072606571ae2d93a1afa41375f206b60 = L.marker(
+                [56.3398198, -2.8117937],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_504737f3ea1c65094ce86f60666ddaef = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_072606571ae2d93a1afa41375f206b60.setIcon(icon_504737f3ea1c65094ce86f60666ddaef);
+        
+    
+        var popup_9b530f80a0bbb38de58ace2e4ac163d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74524c48272a8bf745b5cf0a5550ddf8 = $(`<div id="html_74524c48272a8bf745b5cf0a5550ddf8" style="width: 100.0%; height: 100.0%;">Course Name:  Health Data Science (MSc)   Annual Fees:  31356 €</div>`)[0];
+                popup_9b530f80a0bbb38de58ace2e4ac163d8.setContent(html_74524c48272a8bf745b5cf0a5550ddf8);
+            
+        
+
+        marker_072606571ae2d93a1afa41375f206b60.bindPopup(popup_9b530f80a0bbb38de58ace2e4ac163d8)
+        ;
+
+        
+    
+    
+            marker_072606571ae2d93a1afa41375f206b60.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8cf50ec459528befd40ca3571e7f8044 = L.marker(
+                [51.8947384, -8.4903073],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_f93d3c37b25bcc839d5f0ba9d8c5c9f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_8cf50ec459528befd40ca3571e7f8044.setIcon(icon_f93d3c37b25bcc839d5f0ba9d8c5c9f2);
+        
+    
+        var popup_c5e8c9858b6f989603297710ab092259 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80f777503ae13342bfae6c5d635bf268 = $(`<div id="html_80f777503ae13342bfae6c5d635bf268" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science & Analytics MSc   Annual Fees:  18500 €</div>`)[0];
+                popup_c5e8c9858b6f989603297710ab092259.setContent(html_80f777503ae13342bfae6c5d635bf268);
+            
+        
+
+        marker_8cf50ec459528befd40ca3571e7f8044.bindPopup(popup_c5e8c9858b6f989603297710ab092259)
+        ;
+
+        
+    
+    
+            marker_8cf50ec459528befd40ca3571e7f8044.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1854f1a51a9ae83edd2f82d74605428a = L.marker(
+                [48.846451, 2.3499292],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_012ea75138309c307748632732b1a400 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_1854f1a51a9ae83edd2f82d74605428a.setIcon(icon_012ea75138309c307748632732b1a400);
+        
+    
+        var popup_79f35c86629f29b07b4ba95e81e59943 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9fafddf8e8b822a83d2200f98aa7962 = $(`<div id="html_f9fafddf8e8b822a83d2200f98aa7962" style="width: 100.0%; height: 100.0%;">Course Name:  Master of Science in Data Science for Business (X-HEC)   Annual Fees:  65000 €</div>`)[0];
+                popup_79f35c86629f29b07b4ba95e81e59943.setContent(html_f9fafddf8e8b822a83d2200f98aa7962);
+            
+        
+
+        marker_1854f1a51a9ae83edd2f82d74605428a.bindPopup(popup_79f35c86629f29b07b4ba95e81e59943)
+        ;
+
+        
+    
+    
+            marker_1854f1a51a9ae83edd2f82d74605428a.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9d7564747e96d0c05fca99b622026507 = L.marker(
+                [51.4404358, -0.9417618],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_57a2bf53ea72d54cc71e896690dbbcb0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_9d7564747e96d0c05fca99b622026507.setIcon(icon_57a2bf53ea72d54cc71e896690dbbcb0);
+        
+    
+        var popup_04f413bf61fed3bfd173c530e14ca333 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be1d0cc4817e0b924cd91c98bdf1964f = $(`<div id="html_be1d0cc4817e0b924cd91c98bdf1964f" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Advanced Computing   Annual Fees:  31034 €</div>`)[0];
+                popup_04f413bf61fed3bfd173c530e14ca333.setContent(html_be1d0cc4817e0b924cd91c98bdf1964f);
+            
+        
+
+        marker_9d7564747e96d0c05fca99b622026507.bindPopup(popup_04f413bf61fed3bfd173c530e14ca333)
+        ;
+
+        
+    
+    
+            marker_9d7564747e96d0c05fca99b622026507.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b036bbe38ad906a1409890b7bc7bb3c1 = L.marker(
+                [55.51165, 11.29032],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_2a89052edf00c5788516efe4e4f7d4de = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_b036bbe38ad906a1409890b7bc7bb3c1.setIcon(icon_2a89052edf00c5788516efe4e4f7d4de);
+        
+    
+        var popup_e7969c5cb98d9855c2e5d29bc377356f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a726c7de142ea6f1bdba6fd16e8d94bc = $(`<div id="html_a726c7de142ea6f1bdba6fd16e8d94bc" style="width: 100.0%; height: 100.0%;">Course Name:  Master of Science in Big Data Technology   Annual Fees:  221510 €</div>`)[0];
+                popup_e7969c5cb98d9855c2e5d29bc377356f.setContent(html_a726c7de142ea6f1bdba6fd16e8d94bc);
+            
+        
+
+        marker_b036bbe38ad906a1409890b7bc7bb3c1.bindPopup(popup_e7969c5cb98d9855c2e5d29bc377356f)
+        ;
+
+        
+    
+    
+            marker_b036bbe38ad906a1409890b7bc7bb3c1.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_95fc0cf4abeffe017dec1066586af3aa = L.marker(
+                [50.7791645, 6.068921],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_b5b690ec70655c36954663c450048481 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_95fc0cf4abeffe017dec1066586af3aa.setIcon(icon_b5b690ec70655c36954663c450048481);
+        
+    
+        var popup_20db35f7d8fcd7d895e128da7edb76aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f888288a9e83ce035ca12c3b76eb36b = $(`<div id="html_2f888288a9e83ce035ca12c3b76eb36b" style="width: 100.0%; height: 100.0%;">Course Name:  M.SC. DATA ANALYTICS AND DECISION SCIENCE (DDS)   Annual Fees:  30000 €</div>`)[0];
+                popup_20db35f7d8fcd7d895e128da7edb76aa.setContent(html_2f888288a9e83ce035ca12c3b76eb36b);
+            
+        
+
+        marker_95fc0cf4abeffe017dec1066586af3aa.bindPopup(popup_20db35f7d8fcd7d895e128da7edb76aa)
+        ;
+
+        
+    
+    
+            marker_95fc0cf4abeffe017dec1066586af3aa.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_460b89c8e1f0d193e2a1396e6457cf8c = L.marker(
+                [53.8067743, -1.5562878],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_730fa1f3ed5584069fba1949e5116450 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_460b89c8e1f0d193e2a1396e6457cf8c.setIcon(icon_730fa1f3ed5584069fba1949e5116450);
+        
+    
+        var popup_73cdaf56f86d84d6afcbab9cda7c9dfc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2c5409c1a7395dcf26599581e1cd563 = $(`<div id="html_d2c5409c1a7395dcf26599581e1cd563" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science (Statistics) MSc (Online)   Annual Fees:  17273 €</div>`)[0];
+                popup_73cdaf56f86d84d6afcbab9cda7c9dfc.setContent(html_d2c5409c1a7395dcf26599581e1cd563);
+            
+        
+
+        marker_460b89c8e1f0d193e2a1396e6457cf8c.bindPopup(popup_73cdaf56f86d84d6afcbab9cda7c9dfc)
+        ;
+
+        
+    
+    
+            marker_460b89c8e1f0d193e2a1396e6457cf8c.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4534809108be8d66310d07d59dffdd45 = L.marker(
+                [51.9225, 4.47917],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_b048e007dc86df7217c8db13d073410b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_4534809108be8d66310d07d59dffdd45.setIcon(icon_b048e007dc86df7217c8db13d073410b);
+        
+    
+        var popup_7a898cb4d6dce85ffd3bc884d5d67c9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3de3a46a1a028acb06ac516c28d598cd = $(`<div id="html_3de3a46a1a028acb06ac516c28d598cd" style="width: 100.0%; height: 100.0%;">Course Name:  Business Data Science (Research MSc)   Annual Fees:  17000 €</div>`)[0];
+                popup_7a898cb4d6dce85ffd3bc884d5d67c9b.setContent(html_3de3a46a1a028acb06ac516c28d598cd);
+            
+        
+
+        marker_4534809108be8d66310d07d59dffdd45.bindPopup(popup_7a898cb4d6dce85ffd3bc884d5d67c9b)
+        ;
+
+        
+    
+    
+            marker_4534809108be8d66310d07d59dffdd45.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_692b710102020932aaece7dbe760a535 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_158052de5d4669e699b642014130114a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_692b710102020932aaece7dbe760a535.setIcon(icon_158052de5d4669e699b642014130114a);
+        
+    
+        var popup_2a90e511aea5ee50b528135cffbc7f78 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c50e3e01fde1754fc65ebc85ea6f060e = $(`<div id="html_c50e3e01fde1754fc65ebc85ea6f060e" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Public Policy (Economics) MSc   Annual Fees:  36964 €</div>`)[0];
+                popup_2a90e511aea5ee50b528135cffbc7f78.setContent(html_c50e3e01fde1754fc65ebc85ea6f060e);
+            
+        
+
+        marker_692b710102020932aaece7dbe760a535.bindPopup(popup_2a90e511aea5ee50b528135cffbc7f78)
+        ;
+
+        
+    
+    
+            marker_692b710102020932aaece7dbe760a535.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f9362817f4cf89dfb2257d5d7f7305b8 = L.marker(
+                [51.9225, 4.47917],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_32a1b3d4a6f014ac42ad18cb42adecb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_f9362817f4cf89dfb2257d5d7f7305b8.setIcon(icon_32a1b3d4a6f014ac42ad18cb42adecb4);
+        
+    
+        var popup_abe9f13bc4ed4643d0267eb193ea1210 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2cd3f055fbfedf9f2be13d704ed60f7 = $(`<div id="html_e2cd3f055fbfedf9f2be13d704ed60f7" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Marketing Analytics (MSc)   Annual Fees:  16900 €</div>`)[0];
+                popup_abe9f13bc4ed4643d0267eb193ea1210.setContent(html_e2cd3f055fbfedf9f2be13d704ed60f7);
+            
+        
+
+        marker_f9362817f4cf89dfb2257d5d7f7305b8.bindPopup(popup_abe9f13bc4ed4643d0267eb193ea1210)
+        ;
+
+        
+    
+    
+            marker_f9362817f4cf89dfb2257d5d7f7305b8.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a4a36307dce6937fc92f4ab4c3ec6e3 = L.marker(
+                [53.4072429, -2.9658337],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_911534eba7b61b9c75ea6929e0a03fed = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_0a4a36307dce6937fc92f4ab4c3ec6e3.setIcon(icon_911534eba7b61b9c75ea6929e0a03fed);
+        
+    
+        var popup_87a271758a81ddb18e53f7ef9cc997e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_412eb2f4f23def21f879a6940e1d7fe2 = $(`<div id="html_412eb2f4f23def21f879a6940e1d7fe2" style="width: 100.0%; height: 100.0%;">Course Name:  MSc Data Science and Artificial Intelligence   Annual Fees:  18499 €</div>`)[0];
+                popup_87a271758a81ddb18e53f7ef9cc997e1.setContent(html_412eb2f4f23def21f879a6940e1d7fe2);
+            
+        
+
+        marker_0a4a36307dce6937fc92f4ab4c3ec6e3.bindPopup(popup_87a271758a81ddb18e53f7ef9cc997e1)
+        ;
+
+        
+    
+    
+            marker_0a4a36307dce6937fc92f4ab4c3ec6e3.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e19ec0fc3122d7d07e57a07dcf95b0ea = L.marker(
+                [53.8067743, -1.5562878],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_809514d5e3de35c4a63b46a8926bdf65 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_e19ec0fc3122d7d07e57a07dcf95b0ea.setIcon(icon_809514d5e3de35c4a63b46a8926bdf65);
+        
+    
+        var popup_8a8442685817f653f789585d5005cbdb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ebc844a9494620328fa02226767f9e5 = $(`<div id="html_0ebc844a9494620328fa02226767f9e5" style="width: 100.0%; height: 100.0%;">Course Name:  Environmental Data Science and Analytics - MSc   Annual Fees:  35409 €</div>`)[0];
+                popup_8a8442685817f653f789585d5005cbdb.setContent(html_0ebc844a9494620328fa02226767f9e5);
+            
+        
+
+        marker_e19ec0fc3122d7d07e57a07dcf95b0ea.bindPopup(popup_8a8442685817f653f789585d5005cbdb)
+        ;
+
+        
+    
+    
+            marker_e19ec0fc3122d7d07e57a07dcf95b0ea.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4dc78064f4361f7461af0696fa6fa7d2 = L.marker(
+                [51.489051, 7.4062793],
+                {"tags": ["5000 to 10000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_c1c03f205bc6c72c661ec165f66bad9f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_4dc78064f4361f7461af0696fa6fa7d2.setIcon(icon_c1c03f205bc6c72c661ec165f66bad9f);
+        
+    
+        var popup_548863546d40fbb94f2141ae0312647a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5af2cb446d7f98ba22e59e402bbd4ce3 = $(`<div id="html_5af2cb446d7f98ba22e59e402bbd4ce3" style="width: 100.0%; height: 100.0%;">Course Name:  Business Intelligence & Data Science , M.Sc.   Annual Fees:  5700 €</div>`)[0];
+                popup_548863546d40fbb94f2141ae0312647a.setContent(html_5af2cb446d7f98ba22e59e402bbd4ce3);
+            
+        
+
+        marker_4dc78064f4361f7461af0696fa6fa7d2.bindPopup(popup_548863546d40fbb94f2141ae0312647a)
+        ;
+
+        
+    
+    
+            marker_4dc78064f4361f7461af0696fa6fa7d2.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_de757d7872d8b76ea82628f719b17f4c = L.marker(
+                [53.8067743, -1.5562878],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_02c1a73eb30ee9cfe4e7ae88af82be2c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_de757d7872d8b76ea82628f719b17f4c.setIcon(icon_02c1a73eb30ee9cfe4e7ae88af82be2c);
+        
+    
+        var popup_b3fa506ec9369c346abd4c1312677f90 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_37254118a436d4a3092ff24b3fbef0d8 = $(`<div id="html_37254118a436d4a3092ff24b3fbef0d8" style="width: 100.0%; height: 100.0%;">Course Name:  Advanced Computer Science (Data Analytics) - MSc   Annual Fees:  36561 €</div>`)[0];
+                popup_b3fa506ec9369c346abd4c1312677f90.setContent(html_37254118a436d4a3092ff24b3fbef0d8);
+            
+        
+
+        marker_de757d7872d8b76ea82628f719b17f4c.bindPopup(popup_b3fa506ec9369c346abd4c1312677f90)
+        ;
+
+        
+    
+    
+            marker_de757d7872d8b76ea82628f719b17f4c.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fa7970602d118f02b20f1bd1cb0b6524 = L.marker(
+                [53.8067743, -1.5562878],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_f42d9f53eb01953d332d265f45fc80e4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_fa7970602d118f02b20f1bd1cb0b6524.setIcon(icon_f42d9f53eb01953d332d265f45fc80e4);
+        
+    
+        var popup_f6dd0dce90c7f1772409bd5298c12811 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b9a4a422718161c358c65c13c856e01f = $(`<div id="html_b9a4a422718161c358c65c13c856e01f" style="width: 100.0%; height: 100.0%;">Course Name:  Urban Data Science and Analytics - MSc   Annual Fees:  35409 €</div>`)[0];
+                popup_f6dd0dce90c7f1772409bd5298c12811.setContent(html_b9a4a422718161c358c65c13c856e01f);
+            
+        
+
+        marker_fa7970602d118f02b20f1bd1cb0b6524.bindPopup(popup_f6dd0dce90c7f1772409bd5298c12811)
+        ;
+
+        
+    
+    
+            marker_fa7970602d118f02b20f1bd1cb0b6524.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e3fdb14328eb24b2707b405fd48d6fb6 = L.marker(
+                [52.0531808, 1.1641647],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_097712129648c7e41443783a080d45d1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_e3fdb14328eb24b2707b405fd48d6fb6.setIcon(icon_097712129648c7e41443783a080d45d1);
+        
+    
+        var popup_f993477eb0a228c266a4b2481ea2370b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f82cc1599e5323241ee9f3778665a8c = $(`<div id="html_6f82cc1599e5323241ee9f3778665a8c" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Artificial Intelligence - MSc   Annual Fees:  16115 €</div>`)[0];
+                popup_f993477eb0a228c266a4b2481ea2370b.setContent(html_6f82cc1599e5323241ee9f3778665a8c);
+            
+        
+
+        marker_e3fdb14328eb24b2707b405fd48d6fb6.bindPopup(popup_f993477eb0a228c266a4b2481ea2370b)
+        ;
+
+        
+    
+    
+            marker_e3fdb14328eb24b2707b405fd48d6fb6.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_405e00467dc804eb07b42865706c5e65 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_985320962c84cf22e6ff517da01f0140 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_405e00467dc804eb07b42865706c5e65.setIcon(icon_985320962c84cf22e6ff517da01f0140);
+        
+    
+        var popup_982d284c37dde8b02b25ac0f86b76eed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_158a29188e7fb94de1d08a604dab5491 = $(`<div id="html_158a29188e7fb94de1d08a604dab5491" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Machine Learning MSc   Annual Fees:  20727 €</div>`)[0];
+                popup_982d284c37dde8b02b25ac0f86b76eed.setContent(html_158a29188e7fb94de1d08a604dab5491);
+            
+        
+
+        marker_405e00467dc804eb07b42865706c5e65.bindPopup(popup_982d284c37dde8b02b25ac0f86b76eed)
+        ;
+
+        
+    
+    
+            marker_405e00467dc804eb07b42865706c5e65.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1ff8671397e461106f05c4d3a75a6466 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_0f672819e2416c17b0776e2b9c3cda94 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_1ff8671397e461106f05c4d3a75a6466.setIcon(icon_0f672819e2416c17b0776e2b9c3cda94);
+        
+    
+        var popup_78ed670f5179378d1901d22f1699b8ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_914cab4b59ad00e55682afedea152f6b = $(`<div id="html_914cab4b59ad00e55682afedea152f6b" style="width: 100.0%; height: 100.0%;">Course Name:  Knowledge, Information and Data Science MSc   Annual Fees:  16236 €</div>`)[0];
+                popup_78ed670f5179378d1901d22f1699b8ae.setContent(html_914cab4b59ad00e55682afedea152f6b);
+            
+        
+
+        marker_1ff8671397e461106f05c4d3a75a6466.bindPopup(popup_78ed670f5179378d1901d22f1699b8ae)
+        ;
+
+        
+    
+    
+            marker_1ff8671397e461106f05c4d3a75a6466.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b09ee89951c9147e6287487cf625c0be = L.marker(
+                [51.7517443, -0.2390498],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_c4271ed30e0f4145234c402f993132fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_b09ee89951c9147e6287487cf625c0be.setIcon(icon_c4271ed30e0f4145234c402f993132fe);
+        
+    
+        var popup_19f3ede5470a639febdb73b86dd4e6b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c42e375aca2aefefebd4bd2a320ac1fa = $(`<div id="html_c42e375aca2aefefebd4bd2a320ac1fa" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Analytics with Advanced Research - MSc   Annual Fees:  19000 €</div>`)[0];
+                popup_19f3ede5470a639febdb73b86dd4e6b3.setContent(html_c42e375aca2aefefebd4bd2a320ac1fa);
+            
+        
+
+        marker_b09ee89951c9147e6287487cf625c0be.bindPopup(popup_19f3ede5470a639febdb73b86dd4e6b3)
+        ;
+
+        
+    
+    
+            marker_b09ee89951c9147e6287487cf625c0be.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a47223f2b0396301dd3b9a075b120e58 = L.marker(
+                [53.8067743, -1.5562878],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_d7352646b7a24eecdecef3721f08f748 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_a47223f2b0396301dd3b9a075b120e58.setIcon(icon_d7352646b7a24eecdecef3721f08f748);
+        
+    
+        var popup_ba75fbac8a0de7b06636577af3369fa0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb613ce7525e21aefadac856a4f2a08a = $(`<div id="html_bb613ce7525e21aefadac856a4f2a08a" style="width: 100.0%; height: 100.0%;">Course Name:  Health Informatics with Data Science MSc   Annual Fees:  31667 €</div>`)[0];
+                popup_ba75fbac8a0de7b06636577af3369fa0.setContent(html_bb613ce7525e21aefadac856a4f2a08a);
+            
+        
+
+        marker_a47223f2b0396301dd3b9a075b120e58.bindPopup(popup_ba75fbac8a0de7b06636577af3369fa0)
+        ;
+
+        
+    
+    
+            marker_a47223f2b0396301dd3b9a075b120e58.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_43267ebc6549d50f71eb760014ba8803 = L.marker(
+                [52.52437, 13.41053],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_fa7620af5463cb9137baebafaf1b0bb4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_43267ebc6549d50f71eb760014ba8803.setIcon(icon_fa7620af5463cb9137baebafaf1b0bb4);
+        
+    
+        var popup_cdb25ab2bbc123a80c2f5c2331d223bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_470240e5ce78cc13809f61b503f610ad = $(`<div id="html_470240e5ce78cc13809f61b503f610ad" style="width: 100.0%; height: 100.0%;">Course Name:  Master in Project Management and Data Science   Annual Fees:  17600 €</div>`)[0];
+                popup_cdb25ab2bbc123a80c2f5c2331d223bc.setContent(html_470240e5ce78cc13809f61b503f610ad);
+            
+        
+
+        marker_43267ebc6549d50f71eb760014ba8803.bindPopup(popup_cdb25ab2bbc123a80c2f5c2331d223bc)
+        ;
+
+        
+    
+    
+            marker_43267ebc6549d50f71eb760014ba8803.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b53216bcebbc6f90acd499e1e3490cac = L.marker(
+                [51.7517443, -0.2390498],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_a023e3f5b3b5ec7fa4681c4203c2677f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_b53216bcebbc6f90acd499e1e3490cac.setIcon(icon_a023e3f5b3b5ec7fa4681c4203c2677f);
+        
+    
+        var popup_74f8cb0c02ba4316f1cabc8eec36bddf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d9a9ac304293a076b947f8f1297fff6f = $(`<div id="html_d9a9ac304293a076b947f8f1297fff6f" style="width: 100.0%; height: 100.0%;">Course Name:  Data Science and Analytics (placement option available) - MSc   Annual Fees:  19000 €</div>`)[0];
+                popup_74f8cb0c02ba4316f1cabc8eec36bddf.setContent(html_d9a9ac304293a076b947f8f1297fff6f);
+            
+        
+
+        marker_b53216bcebbc6f90acd499e1e3490cac.bindPopup(popup_74f8cb0c02ba4316f1cabc8eec36bddf)
+        ;
+
+        
+    
+    
+            marker_b53216bcebbc6f90acd499e1e3490cac.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fb788f4555ad97324980c0f7c8feb4b3 = L.marker(
+                [45.4618543, 9.1770563],
+                {"tags": ["5000 to 10000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_bd70f21ddef664982fe929eec1ce6189 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_fb788f4555ad97324980c0f7c8feb4b3.setIcon(icon_bd70f21ddef664982fe929eec1ce6189);
+        
+    
+        var popup_720c26b7df02cf918b5b8ea57f621bb3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5450ffef199b81da3cc7945d461d612 = $(`<div id="html_c5450ffef199b81da3cc7945d461d612" style="width: 100.0%; height: 100.0%;">Course Name:  Applied data science for banking and finance MSc   Annual Fees:  9000 €</div>`)[0];
+                popup_720c26b7df02cf918b5b8ea57f621bb3.setContent(html_c5450ffef199b81da3cc7945d461d612);
+            
+        
+
+        marker_fb788f4555ad97324980c0f7c8feb4b3.bindPopup(popup_720c26b7df02cf918b5b8ea57f621bb3)
+        ;
+
+        
+    
+    
+            marker_fb788f4555ad97324980c0f7c8feb4b3.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6fba2017b2f802635533e294d590cf51 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_8a0f2cad08506a803b3808554b900996 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_6fba2017b2f802635533e294d590cf51.setIcon(icon_8a0f2cad08506a803b3808554b900996);
+        
+    
+        var popup_9b832614e2248ee71e84c827118416c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb5c94bf6ad43ee84ac0cfa217ea2298 = $(`<div id="html_cb5c94bf6ad43ee84ac0cfa217ea2298" style="width: 100.0%; height: 100.0%;">Course Name:  Built Environment : Sustainable Heritage (Data Science) MSc   Annual Fees:  20727 €</div>`)[0];
+                popup_9b832614e2248ee71e84c827118416c3.setContent(html_cb5c94bf6ad43ee84ac0cfa217ea2298);
+            
+        
+
+        marker_6fba2017b2f802635533e294d590cf51.bindPopup(popup_9b832614e2248ee71e84c827118416c3)
+        ;
+
+        
+    
+    
+            marker_6fba2017b2f802635533e294d590cf51.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dacaf6960789c537df055d8d6f023d0f = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_148813fc582792667b640f897c545335 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_dacaf6960789c537df055d8d6f023d0f.setIcon(icon_148813fc582792667b640f897c545335);
+        
+    
+        var popup_ebb29d824f65af784fb2c0f7b65709b3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c40c3adf009645f8fb25a77ff0ddebd7 = $(`<div id="html_c40c3adf009645f8fb25a77ff0ddebd7" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Marketing Data Science MSc   Annual Fees:  15546 €</div>`)[0];
+                popup_ebb29d824f65af784fb2c0f7b65709b3.setContent(html_c40c3adf009645f8fb25a77ff0ddebd7);
+            
+        
+
+        marker_dacaf6960789c537df055d8d6f023d0f.bindPopup(popup_ebb29d824f65af784fb2c0f7b65709b3)
+        ;
+
+        
+    
+    
+            marker_dacaf6960789c537df055d8d6f023d0f.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed52ddd3dc70a1baf0e53a6f3b57a9fa = L.marker(
+                [51.2791874, 1.0903253],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_9b322ef66e2fb7700a429c13258e9f8d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ed52ddd3dc70a1baf0e53a6f3b57a9fa.setIcon(icon_9b322ef66e2fb7700a429c13258e9f8d);
+        
+    
+        var popup_816c84a9cf487f2b8d57c340923dd320 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2cd66bb6ce5becda100eb39a3307d34 = $(`<div id="html_a2cd66bb6ce5becda100eb39a3307d34" style="width: 100.0%; height: 100.0%;">Course Name:  Data Intelligence - MSc   Annual Fees:  13629 €</div>`)[0];
+                popup_816c84a9cf487f2b8d57c340923dd320.setContent(html_a2cd66bb6ce5becda100eb39a3307d34);
+            
+        
+
+        marker_ed52ddd3dc70a1baf0e53a6f3b57a9fa.bindPopup(popup_816c84a9cf487f2b8d57c340923dd320)
+        ;
+
+        
+    
+    
+            marker_ed52ddd3dc70a1baf0e53a6f3b57a9fa.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7be3b93c0060409afd4bc988eb60f8c = L.marker(
+                [48.846451, 2.3499292],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_0a140dbcc565a4cc1210a025eb373d69 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_f7be3b93c0060409afd4bc988eb60f8c.setIcon(icon_0a140dbcc565a4cc1210a025eb373d69);
+        
+    
+        var popup_ee882c8f79599ce3ce44ccb10e6a131a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74793ae636768a9bdc3d0e5676eeaefa = $(`<div id="html_74793ae636768a9bdc3d0e5676eeaefa" style="width: 100.0%; height: 100.0%;">Course Name:  Master of Science and Technology in Data and Economics for Public Policy   Annual Fees:  10000 €</div>`)[0];
+                popup_ee882c8f79599ce3ce44ccb10e6a131a.setContent(html_74793ae636768a9bdc3d0e5676eeaefa);
+            
+        
+
+        marker_f7be3b93c0060409afd4bc988eb60f8c.bindPopup(popup_ee882c8f79599ce3ce44ccb10e6a131a)
+        ;
+
+        
+    
+    
+            marker_f7be3b93c0060409afd4bc988eb60f8c.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b4d3e799f92f9c83e88545f8cfdd93be = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_330a539023f9e81552aae07ae76f1dce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_b4d3e799f92f9c83e88545f8cfdd93be.setIcon(icon_330a539023f9e81552aae07ae76f1dce);
+        
+    
+        var popup_4da695a318830b3e99b097a02ce7fedc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c854a10311521c2eed44c40dc9ba722e = $(`<div id="html_c854a10311521c2eed44c40dc9ba722e" style="width: 100.0%; height: 100.0%;">Course Name:  Computational Archaeology: GIS, Data Science and Complexity MSc   Annual Fees:  16236 €</div>`)[0];
+                popup_4da695a318830b3e99b097a02ce7fedc.setContent(html_c854a10311521c2eed44c40dc9ba722e);
+            
+        
+
+        marker_b4d3e799f92f9c83e88545f8cfdd93be.bindPopup(popup_4da695a318830b3e99b097a02ce7fedc)
+        ;
+
+        
+    
+    
+            marker_b4d3e799f92f9c83e88545f8cfdd93be.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2925e03bee59c9631396f2d2f97fc7bc = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_3bfb06c62942f5399dbed90706e67c25 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_2925e03bee59c9631396f2d2f97fc7bc.setIcon(icon_3bfb06c62942f5399dbed90706e67c25);
+        
+    
+        var popup_f304cb0a5dc334b8a9c22f85c4edaf9a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0a4cadef4181dc620d7300aee9dd49f6 = $(`<div id="html_0a4cadef4181dc620d7300aee9dd49f6" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Econometrics and Data Science MSc   Annual Fees:  15546 €</div>`)[0];
+                popup_f304cb0a5dc334b8a9c22f85c4edaf9a.setContent(html_0a4cadef4181dc620d7300aee9dd49f6);
+            
+        
+
+        marker_2925e03bee59c9631396f2d2f97fc7bc.bindPopup(popup_f304cb0a5dc334b8a9c22f85c4edaf9a)
+        ;
+
+        
+    
+    
+            marker_2925e03bee59c9631396f2d2f97fc7bc.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_014fe73a7c2bfa2b215b2d42ba12564d = L.marker(
+                [45.4618543, 9.1770563],
+                {"tags": ["5000 to 10000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_b286abb23af15ae6b6a44423efc8f4b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "orange", "prefix": "fa"}
+            );
+            marker_014fe73a7c2bfa2b215b2d42ba12564d.setIcon(icon_b286abb23af15ae6b6a44423efc8f4b0);
+        
+    
+        var popup_b066c9e06b28f0f650d3839600ee194d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_211a60a78991eb426d929c93d9345eb5 = $(`<div id="html_211a60a78991eb426d929c93d9345eb5" style="width: 100.0%; height: 100.0%;">Course Name:  Data analytics for business MSc   Annual Fees:  9000 €</div>`)[0];
+                popup_b066c9e06b28f0f650d3839600ee194d.setContent(html_211a60a78991eb426d929c93d9345eb5);
+            
+        
+
+        marker_014fe73a7c2bfa2b215b2d42ba12564d.bindPopup(popup_b066c9e06b28f0f650d3839600ee194d)
+        ;
+
+        
+    
+    
+            marker_014fe73a7c2bfa2b215b2d42ba12564d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a46e9b528dc86562f2f653caa7c9eb58 = L.marker(
+                [50.8225529, 4.3954915],
+                {"tags": ["1000 to 5000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_4ee0ed9cf763ab13a3421b3903f26271 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_a46e9b528dc86562f2f653caa7c9eb58.setIcon(icon_4ee0ed9cf763ab13a3421b3903f26271);
+        
+    
+        var popup_d75a95b56d91383f53b28b60ca429bf6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f060eb4669be8c198f98b0bbbb912ee = $(`<div id="html_8f060eb4669be8c198f98b0bbbb912ee" style="width: 100.0%; height: 100.0%;">Course Name:  Applied Sciences and Engineering: Applied Computer Science   Annual Fees:  4000 €</div>`)[0];
+                popup_d75a95b56d91383f53b28b60ca429bf6.setContent(html_8f060eb4669be8c198f98b0bbbb912ee);
+            
+        
+
+        marker_a46e9b528dc86562f2f653caa7c9eb58.bindPopup(popup_d75a95b56d91383f53b28b60ca429bf6)
+        ;
+
+        
+    
+    
+            marker_a46e9b528dc86562f2f653caa7c9eb58.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_aad3c5b753acca187f59d39c58ec88c5 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_17f39d14bd19f2b39bf2e0565cf12329 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_aad3c5b753acca187f59d39c58ec88c5.setIcon(icon_17f39d14bd19f2b39bf2e0565cf12329);
+        
+    
+        var popup_d136c51dd116ec8cbeb76e163e492e29 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d78f8a17498e11c861606a9c0f4ad905 = $(`<div id="html_d78f8a17498e11c861606a9c0f4ad905" style="width: 100.0%; height: 100.0%;">Course Name:  Geospatial Sciences (Geographic Information Science and Computing) MSc   Annual Fees:  20727 €</div>`)[0];
+                popup_d136c51dd116ec8cbeb76e163e492e29.setContent(html_d78f8a17498e11c861606a9c0f4ad905);
+            
+        
+
+        marker_aad3c5b753acca187f59d39c58ec88c5.bindPopup(popup_d136c51dd116ec8cbeb76e163e492e29)
+        ;
+
+        
+    
+    
+            marker_aad3c5b753acca187f59d39c58ec88c5.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f09d2871385cb49d505a421e4274aca7 = L.marker(
+                [60.1756483, 24.95355],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_13c6e0b325bb3493e765a173219bde25 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_f09d2871385cb49d505a421e4274aca7.setIcon(icon_13c6e0b325bb3493e765a173219bde25);
+        
+    
+        var popup_dfcb34c2463386e7af5fe0589840b195 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e21914ccad2918c320dd34dae2398b75 = $(`<div id="html_e21914ccad2918c320dd34dae2398b75" style="width: 100.0%; height: 100.0%;">Course Name:  Computer Science - MSc   Annual Fees:  15000 €</div>`)[0];
+                popup_dfcb34c2463386e7af5fe0589840b195.setContent(html_e21914ccad2918c320dd34dae2398b75);
+            
+        
+
+        marker_f09d2871385cb49d505a421e4274aca7.bindPopup(popup_dfcb34c2463386e7af5fe0589840b195)
+        ;
+
+        
+    
+    
+            marker_f09d2871385cb49d505a421e4274aca7.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b791578ba043b56894471c4414d31b38 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_0c7db9a232f4ba11b81d512939d7f93a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_b791578ba043b56894471c4414d31b38.setIcon(icon_0c7db9a232f4ba11b81d512939d7f93a);
+        
+    
+        var popup_accfadece64bedd7936eae416482de65 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff964099fe8a186af46cbfffece7804e = $(`<div id="html_ff964099fe8a186af46cbfffece7804e" style="width: 100.0%; height: 100.0%;">Course Name:  Geospatial Sciences MSc   Annual Fees:  20727 €</div>`)[0];
+                popup_accfadece64bedd7936eae416482de65.setContent(html_ff964099fe8a186af46cbfffece7804e);
+            
+        
+
+        marker_b791578ba043b56894471c4414d31b38.bindPopup(popup_accfadece64bedd7936eae416482de65)
+        ;
+
+        
+    
+    
+            marker_b791578ba043b56894471c4414d31b38.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1063c1003da196a21b6a1556d052ec42 = L.marker(
+                [48.846451, 2.3499292],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_f26898533be532af68b3b28c5271197c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_1063c1003da196a21b6a1556d052ec42.setIcon(icon_f26898533be532af68b3b28c5271197c);
+        
+    
+        var popup_b435dcf0cf8ce70bd1c61ed6e2562fd6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1237caf4f58252b085e130e294fee5a9 = $(`<div id="html_1237caf4f58252b085e130e294fee5a9" style="width: 100.0%; height: 100.0%;">Course Name:  Master of Science and Technology in Economics, Data Analytics and Corporate Finance   Annual Fees:  10000 €</div>`)[0];
+                popup_b435dcf0cf8ce70bd1c61ed6e2562fd6.setContent(html_1237caf4f58252b085e130e294fee5a9);
+            
+        
+
+        marker_1063c1003da196a21b6a1556d052ec42.bindPopup(popup_b435dcf0cf8ce70bd1c61ed6e2562fd6)
+        ;
+
+        
+    
+    
+            marker_1063c1003da196a21b6a1556d052ec42.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_21fff49775f731a6e4d80b34b9832b21 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_1f9b25a97925f44910e4863e6556e98b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_21fff49775f731a6e4d80b34b9832b21.setIcon(icon_1f9b25a97925f44910e4863e6556e98b);
+        
+    
+        var popup_7b6669f1db98b95b798f2af14bf38a38 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_320b83d496b5fa46f00fd6bcf8aea948 = $(`<div id="html_320b83d496b5fa46f00fd6bcf8aea948" style="width: 100.0%; height: 100.0%;">Course Name:  Computer Science MSc   Annual Fees:  20727 €</div>`)[0];
+                popup_7b6669f1db98b95b798f2af14bf38a38.setContent(html_320b83d496b5fa46f00fd6bcf8aea948);
+            
+        
+
+        marker_21fff49775f731a6e4d80b34b9832b21.bindPopup(popup_7b6669f1db98b95b798f2af14bf38a38)
+        ;
+
+        
+    
+    
+            marker_21fff49775f731a6e4d80b34b9832b21.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ac190d80917b79ee07afa538f58c346 = L.marker(
+                [55.51165, 11.29032],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_03ecbc30eaa4d509d444c299523b5600 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_0ac190d80917b79ee07afa538f58c346.setIcon(icon_03ecbc30eaa4d509d444c299523b5600);
+        
+    
+        var popup_e4aa60a65df68b4e7c8f25fafcc255fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2daad3f9f9e46f3a32e246f4f4bd1c89 = $(`<div id="html_2daad3f9f9e46f3a32e246f4f4bd1c89" style="width: 100.0%; height: 100.0%;">Course Name:  Master of Science in Financial Technology   Annual Fees:  333020 €</div>`)[0];
+                popup_e4aa60a65df68b4e7c8f25fafcc255fb.setContent(html_2daad3f9f9e46f3a32e246f4f4bd1c89);
+            
+        
+
+        marker_0ac190d80917b79ee07afa538f58c346.bindPopup(popup_e4aa60a65df68b4e7c8f25fafcc255fb)
+        ;
+
+        
+    
+    
+            marker_0ac190d80917b79ee07afa538f58c346.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_dd2ca3c554f9434859bd25e58fe9c2e4 = L.marker(
+                [53.8067743, -1.5562878],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_793f322adc8fe41ae9ef12aa5734a751 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_dd2ca3c554f9434859bd25e58fe9c2e4.setIcon(icon_793f322adc8fe41ae9ef12aa5734a751);
+        
+    
+        var popup_e50e6a09142bfa4ecdc8e49d591463ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c6215ecf80502ef3701d64c4aa2ee8b9 = $(`<div id="html_c6215ecf80502ef3701d64c4aa2ee8b9" style="width: 100.0%; height: 100.0%;">Course Name:  Data Analytics and Human Resource Management - MSc   Annual Fees:  34834 €</div>`)[0];
+                popup_e50e6a09142bfa4ecdc8e49d591463ae.setContent(html_c6215ecf80502ef3701d64c4aa2ee8b9);
+            
+        
+
+        marker_dd2ca3c554f9434859bd25e58fe9c2e4.bindPopup(popup_e50e6a09142bfa4ecdc8e49d591463ae)
+        ;
+
+        
+    
+    
+            marker_dd2ca3c554f9434859bd25e58fe9c2e4.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e55466d865c1ca90ac2cdec231c2d450 = L.marker(
+                [51.7517443, -0.2390498],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_2da26032ab9fe7da72686bf56ec2bb6d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_e55466d865c1ca90ac2cdec231c2d450.setIcon(icon_2da26032ab9fe7da72686bf56ec2bb6d);
+        
+    
+        var popup_4ee96d34e25433bc0c77b007f9ac0c07 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_722a8c18f0b5ce28946f325ba1e28055 = $(`<div id="html_722a8c18f0b5ce28946f325ba1e28055" style="width: 100.0%; height: 100.0%;">Course Name:  Advanced Computer Science (Online) - MSc   Annual Fees:  11054 €</div>`)[0];
+                popup_4ee96d34e25433bc0c77b007f9ac0c07.setContent(html_722a8c18f0b5ce28946f325ba1e28055);
+            
+        
+
+        marker_e55466d865c1ca90ac2cdec231c2d450.bindPopup(popup_4ee96d34e25433bc0c77b007f9ac0c07)
+        ;
+
+        
+    
+    
+            marker_e55466d865c1ca90ac2cdec231c2d450.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fd9dc5afb2474beb05248f4400f3294a = L.marker(
+                [56.3398198, -2.8117937],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_0c2c63ea535f8ea6a793adf1a209b314 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_fd9dc5afb2474beb05248f4400f3294a.setIcon(icon_0c2c63ea535f8ea6a793adf1a209b314);
+        
+    
+        var popup_b0140e3688da5928a574f100520bbd21 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_327cc1a9c79d25d818cafd92ee4fa43f = $(`<div id="html_327cc1a9c79d25d818cafd92ee4fa43f" style="width: 100.0%; height: 100.0%;">Course Name:  Data Literacy for Social and Environmental Justice (PGCert/PGDip/MSc) - online   Annual Fees:  20727 €</div>`)[0];
+                popup_b0140e3688da5928a574f100520bbd21.setContent(html_327cc1a9c79d25d818cafd92ee4fa43f);
+            
+        
+
+        marker_fd9dc5afb2474beb05248f4400f3294a.bindPopup(popup_b0140e3688da5928a574f100520bbd21)
+        ;
+
+        
+    
+    
+            marker_fd9dc5afb2474beb05248f4400f3294a.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f16570e1a83b9475cd4693b086b9bdb8 = L.marker(
+                [55.51165, 11.29032],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_071ccd3501eaf3cc0f99c88bc71ad57a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_f16570e1a83b9475cd4693b086b9bdb8.setIcon(icon_071ccd3501eaf3cc0f99c88bc71ad57a);
+        
+    
+        var popup_2ce0a4c610e6dea37886071021dfb3a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_090ce0b31d0d06b2ecb90f6d80e0fc5d = $(`<div id="html_090ce0b31d0d06b2ecb90f6d80e0fc5d" style="width: 100.0%; height: 100.0%;">Course Name:  Master of Science in Biomolecular Engineering and Health Informatics   Annual Fees:  169153 €</div>`)[0];
+                popup_2ce0a4c610e6dea37886071021dfb3a0.setContent(html_090ce0b31d0d06b2ecb90f6d80e0fc5d);
+            
+        
+
+        marker_f16570e1a83b9475cd4693b086b9bdb8.bindPopup(popup_2ce0a4c610e6dea37886071021dfb3a0)
+        ;
+
+        
+    
+    
+            marker_f16570e1a83b9475cd4693b086b9bdb8.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f266f8c972a285e4b43dcbd044bc6e16 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_378b6cee2aecc998eafed051c1144178 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_f266f8c972a285e4b43dcbd044bc6e16.setIcon(icon_378b6cee2aecc998eafed051c1144178);
+        
+    
+        var popup_dd0ad84f8ea461e2852e8473e7048ba3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0a8785edcf921f49ab014389041ed68 = $(`<div id="html_e0a8785edcf921f49ab014389041ed68" style="width: 100.0%; height: 100.0%;">Course Name:  Geospatial Sciences (Hydrographic Surveying) MSc   Annual Fees:  20727 €</div>`)[0];
+                popup_dd0ad84f8ea461e2852e8473e7048ba3.setContent(html_e0a8785edcf921f49ab014389041ed68);
+            
+        
+
+        marker_f266f8c972a285e4b43dcbd044bc6e16.bindPopup(popup_dd0ad84f8ea461e2852e8473e7048ba3)
+        ;
+
+        
+    
+    
+            marker_f266f8c972a285e4b43dcbd044bc6e16.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8509019e78827b12f3bab6cf57729ce7 = L.marker(
+                [40.8617344, -73.8860317],
+                {"tags": ["Less than 1000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_06c7abfee4f6aef7725f69ebff4038cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8509019e78827b12f3bab6cf57729ce7.setIcon(icon_06c7abfee4f6aef7725f69ebff4038cb);
+        
+    
+        var popup_704e81df38aa3e3e2c4bbbd17e128dd7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b3a2e73a8893e89f251be55a3415ade9 = $(`<div id="html_b3a2e73a8893e89f251be55a3415ade9" style="width: 100.0%; height: 100.0%;">Course Name:  Master of Science in Applied Health Informatics   Annual Fees:  915 €</div>`)[0];
+                popup_704e81df38aa3e3e2c4bbbd17e128dd7.setContent(html_b3a2e73a8893e89f251be55a3415ade9);
+            
+        
+
+        marker_8509019e78827b12f3bab6cf57729ce7.bindPopup(popup_704e81df38aa3e3e2c4bbbd17e128dd7)
+        ;
+
+        
+    
+    
+            marker_8509019e78827b12f3bab6cf57729ce7.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cdfca1f54c9e11f546c717e67a43aa4e = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_8ebb4099f79a768edc4de891a223c9ba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_cdfca1f54c9e11f546c717e67a43aa4e.setIcon(icon_8ebb4099f79a768edc4de891a223c9ba);
+        
+    
+        var popup_6177e329afbb508cff67b105a1351f3f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e81ac4a5adfbbd1dff1cc5cc08086831 = $(`<div id="html_e81ac4a5adfbbd1dff1cc5cc08086831" style="width: 100.0%; height: 100.0%;">Course Name:  Geospatial Sciences (Building Information Modelling and Surveying) MSc   Annual Fees:  20727 €</div>`)[0];
+                popup_6177e329afbb508cff67b105a1351f3f.setContent(html_e81ac4a5adfbbd1dff1cc5cc08086831);
+            
+        
+
+        marker_cdfca1f54c9e11f546c717e67a43aa4e.bindPopup(popup_6177e329afbb508cff67b105a1351f3f)
+        ;
+
+        
+    
+    
+            marker_cdfca1f54c9e11f546c717e67a43aa4e.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_af15506d3b06836ece7d1e4a32597c45 = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_7b6da9b0e0784df0e8b23b2bb09899d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_af15506d3b06836ece7d1e4a32597c45.setIcon(icon_7b6da9b0e0784df0e8b23b2bb09899d8);
+        
+    
+        var popup_db8ae7e62d4126b62165ed095c3cf0b5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a68748b2c25562e7dfce78862da2c390 = $(`<div id="html_a68748b2c25562e7dfce78862da2c390" style="width: 100.0%; height: 100.0%;">Course Name:  Business Analytics: Financial Risk Management MSc   Annual Fees:  14236 €</div>`)[0];
+                popup_db8ae7e62d4126b62165ed095c3cf0b5.setContent(html_a68748b2c25562e7dfce78862da2c390);
+            
+        
+
+        marker_af15506d3b06836ece7d1e4a32597c45.bindPopup(popup_db8ae7e62d4126b62165ed095c3cf0b5)
+        ;
+
+        
+    
+    
+            marker_af15506d3b06836ece7d1e4a32597c45.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_deb8695f8badbd375689916f224a155e = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_79439d56ce72f57e45d1ba8b12d298cb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_deb8695f8badbd375689916f224a155e.setIcon(icon_79439d56ce72f57e45d1ba8b12d298cb);
+        
+    
+        var popup_5a965e788a863c23610c65e7bd254c5e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62ee417e3a2ffd697906f18b14d6fbcf = $(`<div id="html_62ee417e3a2ffd697906f18b14d6fbcf" style="width: 100.0%; height: 100.0%;">Course Name:  Business Analytics: Computational Intelligence MSc   Annual Fees:  14236 €</div>`)[0];
+                popup_5a965e788a863c23610c65e7bd254c5e.setContent(html_62ee417e3a2ffd697906f18b14d6fbcf);
+            
+        
+
+        marker_deb8695f8badbd375689916f224a155e.bindPopup(popup_5a965e788a863c23610c65e7bd254c5e)
+        ;
+
+        
+    
+    
+            marker_deb8695f8badbd375689916f224a155e.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c1bc2817f384e77c7f60e7b2a4191659 = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_03ce82ddb64a154872da2df579b3d380 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_c1bc2817f384e77c7f60e7b2a4191659.setIcon(icon_03ce82ddb64a154872da2df579b3d380);
+        
+    
+        var popup_c4275f8ea5510c43718381c63e4be0c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c004c06e44528f9d5afb10a4ee6df41 = $(`<div id="html_8c004c06e44528f9d5afb10a4ee6df41" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Climate Econometrics MSc   Annual Fees:  16830 €</div>`)[0];
+                popup_c4275f8ea5510c43718381c63e4be0c5.setContent(html_8c004c06e44528f9d5afb10a4ee6df41);
+            
+        
+
+        marker_c1bc2817f384e77c7f60e7b2a4191659.bindPopup(popup_c4275f8ea5510c43718381c63e4be0c5)
+        ;
+
+        
+    
+    
+            marker_c1bc2817f384e77c7f60e7b2a4191659.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_43e38be41e2581d54919c19aed75c7db = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_ddf8e1658d9ab67f7170892734976a03 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_43e38be41e2581d54919c19aed75c7db.setIcon(icon_ddf8e1658d9ab67f7170892734976a03);
+        
+    
+        var popup_e24a77f5845edef44b36a8cb2ce6e2ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1abf8f8f66c2d0bba28124e562e76b0b = $(`<div id="html_1abf8f8f66c2d0bba28124e562e76b0b" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Econometric Theory MSc   Annual Fees:  15546 €</div>`)[0];
+                popup_e24a77f5845edef44b36a8cb2ce6e2ce.setContent(html_1abf8f8f66c2d0bba28124e562e76b0b);
+            
+        
+
+        marker_43e38be41e2581d54919c19aed75c7db.bindPopup(popup_e24a77f5845edef44b36a8cb2ce6e2ce)
+        ;
+
+        
+    
+    
+            marker_43e38be41e2581d54919c19aed75c7db.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_28fcea6d05c70ba4e6b7a7462d1bb998 = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_be9edbaa4798d58bb671290681b57508 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_28fcea6d05c70ba4e6b7a7462d1bb998.setIcon(icon_be9edbaa4798d58bb671290681b57508);
+        
+    
+        var popup_8f4cfc1e856996aa390ec14f0c6f21fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56f4ace5fc9c51318686eabf00d70c1c = $(`<div id="html_56f4ace5fc9c51318686eabf00d70c1c" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Financial Engineering MSc   Annual Fees:  15546 €</div>`)[0];
+                popup_8f4cfc1e856996aa390ec14f0c6f21fb.setContent(html_56f4ace5fc9c51318686eabf00d70c1c);
+            
+        
+
+        marker_28fcea6d05c70ba4e6b7a7462d1bb998.bindPopup(popup_8f4cfc1e856996aa390ec14f0c6f21fb)
+        ;
+
+        
+    
+    
+            marker_28fcea6d05c70ba4e6b7a7462d1bb998.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9a39730e7d7a5784e8b38c348caf3960 = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_5502a6ec1b3db2e56b16855044449c2e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_9a39730e7d7a5784e8b38c348caf3960.setIcon(icon_5502a6ec1b3db2e56b16855044449c2e);
+        
+    
+        var popup_98e24b1f1debcc9b6d46442a7b6d321c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bdda6f62441d930aadac4e11558433b0 = $(`<div id="html_bdda6f62441d930aadac4e11558433b0" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Operations Research Theory MSc   Annual Fees:  15546 €</div>`)[0];
+                popup_98e24b1f1debcc9b6d46442a7b6d321c.setContent(html_bdda6f62441d930aadac4e11558433b0);
+            
+        
+
+        marker_9a39730e7d7a5784e8b38c348caf3960.bindPopup(popup_98e24b1f1debcc9b6d46442a7b6d321c)
+        ;
+
+        
+    
+    
+            marker_9a39730e7d7a5784e8b38c348caf3960.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba832597b68b931a77fd980b1e587b1d = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["10000 to 15000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_922068adda344efdab63df5af27fa126 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_ba832597b68b931a77fd980b1e587b1d.setIcon(icon_922068adda344efdab63df5af27fa126);
+        
+    
+        var popup_d36a6ed83523291fb7e560bad00c2f44 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_658a10208e3febee7a5eec3487d0b194 = $(`<div id="html_658a10208e3febee7a5eec3487d0b194" style="width: 100.0%; height: 100.0%;">Course Name:  Business Analytics: Optimisation of Business Processes MSc   Annual Fees:  14236 €</div>`)[0];
+                popup_d36a6ed83523291fb7e560bad00c2f44.setContent(html_658a10208e3febee7a5eec3487d0b194);
+            
+        
+
+        marker_ba832597b68b931a77fd980b1e587b1d.bindPopup(popup_d36a6ed83523291fb7e560bad00c2f44)
+        ;
+
+        
+    
+    
+            marker_ba832597b68b931a77fd980b1e587b1d.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4aefc54f96b01798bc80dc9199a91020 = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_1e4df24725ae12af6d521f98c23469e3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_4aefc54f96b01798bc80dc9199a91020.setIcon(icon_1e4df24725ae12af6d521f98c23469e3);
+        
+    
+        var popup_71ba763de79ffc47d09eb878377e76da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0be4f6892503563ef66ecb6e5e181819 = $(`<div id="html_0be4f6892503563ef66ecb6e5e181819" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Financial Econometrics MSc   Annual Fees:  15546 €</div>`)[0];
+                popup_71ba763de79ffc47d09eb878377e76da.setContent(html_0be4f6892503563ef66ecb6e5e181819);
+            
+        
+
+        marker_4aefc54f96b01798bc80dc9199a91020.bindPopup(popup_71ba763de79ffc47d09eb878377e76da)
+        ;
+
+        
+    
+    
+            marker_4aefc54f96b01798bc80dc9199a91020.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5bd9f5dd7a3c421f58525d29f0d03da7 = L.marker(
+                [52.3339622, 4.8651965],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_48d1c28c3bb05daded4c6debe417b74a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_5bd9f5dd7a3c421f58525d29f0d03da7.setIcon(icon_48d1c28c3bb05daded4c6debe417b74a);
+        
+    
+        var popup_e3e990fb778f9e82a7b79b5224a83d0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f2c7ff5c9f62c23cd23779f0b45f277 = $(`<div id="html_3f2c7ff5c9f62c23cd23779f0b45f277" style="width: 100.0%; height: 100.0%;">Course Name:  Econometrics and Operations Research: Quantitative Economics MSc   Annual Fees:  15546 €</div>`)[0];
+                popup_e3e990fb778f9e82a7b79b5224a83d0a.setContent(html_3f2c7ff5c9f62c23cd23779f0b45f277);
+            
+        
+
+        marker_5bd9f5dd7a3c421f58525d29f0d03da7.bindPopup(popup_e3e990fb778f9e82a7b79b5224a83d0a)
+        ;
+
+        
+    
+    
+            marker_5bd9f5dd7a3c421f58525d29f0d03da7.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_09cb12d792da88f38ce2f5ede333bf02 = L.marker(
+                [52.4522956, -1.9312857],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_20e601eff6397ad294a26129143935c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_09cb12d792da88f38ce2f5ede333bf02.setIcon(icon_20e601eff6397ad294a26129143935c0);
+        
+    
+        var popup_f49cc1e89d905fde2d3123b072cdfc73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_77d716936b457d88201573a8e5b0a091 = $(`<div id="html_77d716936b457d88201573a8e5b0a091" style="width: 100.0%; height: 100.0%;">Course Name:  Online MSc Bioinformatics   Annual Fees:  19610 €</div>`)[0];
+                popup_f49cc1e89d905fde2d3123b072cdfc73.setContent(html_77d716936b457d88201573a8e5b0a091);
+            
+        
+
+        marker_09cb12d792da88f38ce2f5ede333bf02.bindPopup(popup_f49cc1e89d905fde2d3123b072cdfc73)
+        ;
+
+        
+    
+    
+            marker_09cb12d792da88f38ce2f5ede333bf02.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d9a2d8287eb3a2d07fdec0af4da4363 = L.marker(
+                [50.4006706, 7.6139544],
+                {"tags": ["1000 to 5000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_31c559233b690145b349a676c958d12e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "pink", "prefix": "fa"}
+            );
+            marker_0d9a2d8287eb3a2d07fdec0af4da4363.setIcon(icon_31c559233b690145b349a676c958d12e);
+        
+    
+        var popup_77df267808c5c178edb5d9fa5b7571a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3fc74a192fe71297d32a93e413e98576 = $(`<div id="html_3fc74a192fe71297d32a93e413e98576" style="width: 100.0%; height: 100.0%;">Course Name:  Master in Business Analytics   Annual Fees:  1200 €</div>`)[0];
+                popup_77df267808c5c178edb5d9fa5b7571a8.setContent(html_3fc74a192fe71297d32a93e413e98576);
+            
+        
+
+        marker_0d9a2d8287eb3a2d07fdec0af4da4363.bindPopup(popup_77df267808c5c178edb5d9fa5b7571a8)
+        ;
+
+        
+    
+    
+            marker_0d9a2d8287eb3a2d07fdec0af4da4363.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b37077db38cb896226a196b74242aa90 = L.marker(
+                [51.5902971, -0.2296322],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_d16b3476465fae75e9437a18b57438a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_b37077db38cb896226a196b74242aa90.setIcon(icon_d16b3476465fae75e9437a18b57438a9);
+        
+    
+        var popup_b15f0ef2a74920175d417190a122d4df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acd374d17ffdcd47ce11831970527b26 = $(`<div id="html_acd374d17ffdcd47ce11831970527b26" style="width: 100.0%; height: 100.0%;">Course Name:  Applied Statistics MSc/PGDip   Annual Fees:  18079 €</div>`)[0];
+                popup_b15f0ef2a74920175d417190a122d4df.setContent(html_acd374d17ffdcd47ce11831970527b26);
+            
+        
+
+        marker_b37077db38cb896226a196b74242aa90.bindPopup(popup_b15f0ef2a74920175d417190a122d4df)
+        ;
+
+        
+    
+    
+            marker_b37077db38cb896226a196b74242aa90.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6f27f62a46fa4eed4cd46eb497a95755 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_17b184f2076224385b2937d378bf8cd5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_6f27f62a46fa4eed4cd46eb497a95755.setIcon(icon_17b184f2076224385b2937d378bf8cd5);
+        
+    
+        var popup_36a428b89117f905c1969439c3c99641 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0589b12ced330ae932c74f40d5e47b0 = $(`<div id="html_e0589b12ced330ae932c74f40d5e47b0" style="width: 100.0%; height: 100.0%;">Course Name:  Connected Environments MSc   Annual Fees:  17388 €</div>`)[0];
+                popup_36a428b89117f905c1969439c3c99641.setContent(html_e0589b12ced330ae932c74f40d5e47b0);
+            
+        
+
+        marker_6f27f62a46fa4eed4cd46eb497a95755.bindPopup(popup_36a428b89117f905c1969439c3c99641)
+        ;
+
+        
+    
+    
+            marker_6f27f62a46fa4eed4cd46eb497a95755.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_16e39804fb129680f8fc706d0aa92d1f = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_feb395dc942cf2c207a841e84b867d8d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_16e39804fb129680f8fc706d0aa92d1f.setIcon(icon_feb395dc942cf2c207a841e84b867d8d);
+        
+    
+        var popup_ae025fd4d3ccc00406900d3fa8f1509c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb3833fb0809b27599810a02fe190f85 = $(`<div id="html_eb3833fb0809b27599810a02fe190f85" style="width: 100.0%; height: 100.0%;">Course Name:  Emerging Digital Technologies MSc   Annual Fees:  36964 €</div>`)[0];
+                popup_ae025fd4d3ccc00406900d3fa8f1509c.setContent(html_eb3833fb0809b27599810a02fe190f85);
+            
+        
+
+        marker_16e39804fb129680f8fc706d0aa92d1f.bindPopup(popup_ae025fd4d3ccc00406900d3fa8f1509c)
+        ;
+
+        
+    
+    
+            marker_16e39804fb129680f8fc706d0aa92d1f.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a06813a519d7443a9b9f604f1e4bef6 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_0ee430b059938883b286e8c61f325218 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_3a06813a519d7443a9b9f604f1e4bef6.setIcon(icon_0ee430b059938883b286e8c61f325218);
+        
+    
+        var popup_7c91a1f91ea9a26dd896ad62d566a986 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8a212a3d492b4d21a4a62cdd844f2a43 = $(`<div id="html_8a212a3d492b4d21a4a62cdd844f2a43" style="width: 100.0%; height: 100.0%;">Course Name:  Applied Analytical Chemistry MSc   Annual Fees:  16236 €</div>`)[0];
+                popup_7c91a1f91ea9a26dd896ad62d566a986.setContent(html_8a212a3d492b4d21a4a62cdd844f2a43);
+            
+        
+
+        marker_3a06813a519d7443a9b9f604f1e4bef6.bindPopup(popup_7c91a1f91ea9a26dd896ad62d566a986)
+        ;
+
+        
+    
+    
+            marker_3a06813a519d7443a9b9f604f1e4bef6.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ce6242facbbca152bb41816c98a097d6 = L.marker(
+                [51.9225, 4.47917],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_2768d312bb8afe0e2879005395a29d07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_ce6242facbbca152bb41816c98a097d6.setIcon(icon_2768d312bb8afe0e2879005395a29d07);
+        
+    
+        var popup_f052e746beecc9f4c891855017da346b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_41a68929f51de3339bdaeddf9bec5b43 = $(`<div id="html_41a68929f51de3339bdaeddf9bec5b43" style="width: 100.0%; height: 100.0%;">Course Name:  Business Analytics and Quantitative Marketing (MSc)   Annual Fees:  16900 €</div>`)[0];
+                popup_f052e746beecc9f4c891855017da346b.setContent(html_41a68929f51de3339bdaeddf9bec5b43);
+            
+        
+
+        marker_ce6242facbbca152bb41816c98a097d6.bindPopup(popup_f052e746beecc9f4c891855017da346b)
+        ;
+
+        
+    
+    
+            marker_ce6242facbbca152bb41816c98a097d6.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_093bff6f41a8d850ea59bd8e38cc2eb6 = L.marker(
+                [51.4404358, -0.9417618],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_2cb163d4c9ab82a022c375523afe6598 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_093bff6f41a8d850ea59bd8e38cc2eb6.setIcon(icon_2cb163d4c9ab82a022c375523afe6598);
+        
+    
+        var popup_398517130b8c8d217abbd3baa124d5d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_57b383302d067f6a261de4610677c87f = $(`<div id="html_57b383302d067f6a261de4610677c87f" style="width: 100.0%; height: 100.0%;">Course Name:  Applied Meteorology and Climate   Annual Fees:  31034 €</div>`)[0];
+                popup_398517130b8c8d217abbd3baa124d5d4.setContent(html_57b383302d067f6a261de4610677c87f);
+            
+        
+
+        marker_093bff6f41a8d850ea59bd8e38cc2eb6.bindPopup(popup_398517130b8c8d217abbd3baa124d5d4)
+        ;
+
+        
+    
+    
+            marker_093bff6f41a8d850ea59bd8e38cc2eb6.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_576eb63a9912d1b3cc6e02a1171f239b = L.marker(
+                [51.3765873, -2.3234326],
+                {"tags": ["Less than 1000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_cdfcec3f725ac1dde8bbd8139f4db435 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_576eb63a9912d1b3cc6e02a1171f239b.setIcon(icon_cdfcec3f725ac1dde8bbd8139f4db435);
+        
+    
+        var popup_01ffc88e6a1bbdff503fb263a15149f7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f1730072fab980b7262576b92c5ced2 = $(`<div id="html_9f1730072fab980b7262576b92c5ced2" style="width: 100.0%; height: 100.0%;">Course Name:  Artificial Intelligence, online MSc   Annual Fees:  831 €</div>`)[0];
+                popup_01ffc88e6a1bbdff503fb263a15149f7.setContent(html_9f1730072fab980b7262576b92c5ced2);
+            
+        
+
+        marker_576eb63a9912d1b3cc6e02a1171f239b.bindPopup(popup_01ffc88e6a1bbdff503fb263a15149f7)
+        ;
+
+        
+    
+    
+            marker_576eb63a9912d1b3cc6e02a1171f239b.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eee17d84167cfc0d7bc9f5441ad09437 = L.marker(
+                [53.4072429, -2.9658337],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_34921a3d19ef4ea0e44250da5fe7c2c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_eee17d84167cfc0d7bc9f5441ad09437.setIcon(icon_34921a3d19ef4ea0e44250da5fe7c2c1);
+        
+    
+        var popup_98af413661aef764369a3529c3fb4fad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1699a4b31c725c927b5c62e787f01913 = $(`<div id="html_1699a4b31c725c927b5c62e787f01913" style="width: 100.0%; height: 100.0%;">Course Name:  Bioinformatics MSc   Annual Fees:  28500 €</div>`)[0];
+                popup_98af413661aef764369a3529c3fb4fad.setContent(html_1699a4b31c725c927b5c62e787f01913);
+            
+        
+
+        marker_eee17d84167cfc0d7bc9f5441ad09437.bindPopup(popup_98af413661aef764369a3529c3fb4fad)
+        ;
+
+        
+    
+    
+            marker_eee17d84167cfc0d7bc9f5441ad09437.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5a150373ed832d5ea50b15a670b158c9 = L.marker(
+                [51.524203, -0.1330007],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_c7dbe716d92c2399120c3aa860ee9056 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_5a150373ed832d5ea50b15a670b158c9.setIcon(icon_c7dbe716d92c2399120c3aa860ee9056);
+        
+    
+        var popup_1363b2e3b998f888c598605416959306 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9e92d078c56b8d9f71aa53ea5a505005 = $(`<div id="html_9e92d078c56b8d9f71aa53ea5a505005" style="width: 100.0%; height: 100.0%;">Course Name:  Genetics and Multiomics in Medicine MSc   Annual Fees:  18539 €</div>`)[0];
+                popup_1363b2e3b998f888c598605416959306.setContent(html_9e92d078c56b8d9f71aa53ea5a505005);
+            
+        
+
+        marker_5a150373ed832d5ea50b15a670b158c9.bindPopup(popup_1363b2e3b998f888c598605416959306)
+        ;
+
+        
+    
+    
+            marker_5a150373ed832d5ea50b15a670b158c9.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0f2a04c9b414e9020c29ba9caeaa32e = L.marker(
+                [51.8947384, -8.4903073],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_83fa383870c7c239df7424162bca2150 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_e0f2a04c9b414e9020c29ba9caeaa32e.setIcon(icon_83fa383870c7c239df7424162bca2150);
+        
+    
+        var popup_da2f8efe46343bb8d295cb47a6fb5053 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e569446581f2f689778a186246987fa = $(`<div id="html_2e569446581f2f689778a186246987fa" style="width: 100.0%; height: 100.0%;">Course Name:  Applied Coastal and Marine Management MSc   Annual Fees:  16400 €</div>`)[0];
+                popup_da2f8efe46343bb8d295cb47a6fb5053.setContent(html_2e569446581f2f689778a186246987fa);
+            
+        
+
+        marker_e0f2a04c9b414e9020c29ba9caeaa32e.bindPopup(popup_da2f8efe46343bb8d295cb47a6fb5053)
+        ;
+
+        
+    
+    
+            marker_e0f2a04c9b414e9020c29ba9caeaa32e.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_30ac76397b2fda247fed6ea56e4b3af0 = L.marker(
+                [51.8947384, -8.4903073],
+                {"tags": ["15000 to 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_3e08c7897887d136eca40df11a0a86cf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_30ac76397b2fda247fed6ea56e4b3af0.setIcon(icon_3e08c7897887d136eca40df11a0a86cf);
+        
+    
+        var popup_60bd7e2240a73256b74b7663676e5993 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_85055d6bb7bad59301fc14dfd4951a7c = $(`<div id="html_85055d6bb7bad59301fc14dfd4951a7c" style="width: 100.0%; height: 100.0%;">Course Name:  Bioinformatics and Computational Biology MSc   Annual Fees:  18500 €</div>`)[0];
+                popup_60bd7e2240a73256b74b7663676e5993.setContent(html_85055d6bb7bad59301fc14dfd4951a7c);
+            
+        
+
+        marker_30ac76397b2fda247fed6ea56e4b3af0.bindPopup(popup_60bd7e2240a73256b74b7663676e5993)
+        ;
+
+        
+    
+    
+            marker_30ac76397b2fda247fed6ea56e4b3af0.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f75a31f16920a3f93bc420223bd0bf6 = L.marker(
+                [41.66667, 2.0],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_8a7b3adbcfd4d9629ad791d46a1d8286 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_2f75a31f16920a3f93bc420223bd0bf6.setIcon(icon_8a7b3adbcfd4d9629ad791d46a1d8286);
+        
+    
+        var popup_1dad30d35c273ceac80b5201076f073a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d45d278c970338c9539bd443b93b628 = $(`<div id="html_1d45d278c970338c9539bd443b93b628" style="width: 100.0%; height: 100.0%;">Course Name:  Master's of Cyber Security   Annual Fees:  29900 €</div>`)[0];
+                popup_1dad30d35c273ceac80b5201076f073a.setContent(html_1d45d278c970338c9539bd443b93b628);
+            
+        
+
+        marker_2f75a31f16920a3f93bc420223bd0bf6.bindPopup(popup_1dad30d35c273ceac80b5201076f073a)
+        ;
+
+        
+    
+    
+            marker_2f75a31f16920a3f93bc420223bd0bf6.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_be8aaf4d529ebfdc2903fa396501ba8c = L.marker(
+                [53.4657087, -2.2327343],
+                {"tags": ["More than 20000 \u20ac"]}
+            ).addTo(marker_cluster_ee993cca0222d188d889504a95afaf3e);
+        
+    
+            var icon_ac5f61f4accc686994589b98aa2b7461 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "university", "iconColor": "white", "markerColor": "black", "prefix": "fa"}
+            );
+            marker_be8aaf4d529ebfdc2903fa396501ba8c.setIcon(icon_ac5f61f4accc686994589b98aa2b7461);
+        
+    
+        var popup_ea8aa816d173202aaec2cd7146b72b69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd6c764fbe6feece2ee7b4a0073519c8 = $(`<div id="html_cd6c764fbe6feece2ee7b4a0073519c8" style="width: 100.0%; height: 100.0%;">Course Name:  MSc in Integrated Immunology   Annual Fees:  52383 €</div>`)[0];
+                popup_ea8aa816d173202aaec2cd7146b72b69.setContent(html_cd6c764fbe6feece2ee7b4a0073519c8);
+            
+        
+
+        marker_be8aaf4d529ebfdc2903fa396501ba8c.bindPopup(popup_ea8aa816d173202aaec2cd7146b72b69)
+        ;
+
+        
+    
+    
+            marker_be8aaf4d529ebfdc2903fa396501ba8c.bindTooltip(
+                `<div>
+                     Click me!
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+                marker_cluster_ee993cca0222d188d889504a95afaf3e.addTo(map_3d81440dc27ceb960a4595297f1c34a3);
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": true, "position": "topright", "title": "Expand me", "titleCancel": "Exit me"}
+            ).addTo(map_3d81440dc27ceb960a4595297f1c34a3);
+        
+    
+            var tag_filter_button_65ed576c59d793f2a094ac106f4dd110 = L.control.tagFilterButton(
+                {"clearText": "clear", "data": ["Less than 1000 \u20ac", "1000 to 5000 \u20ac", "5000 to 10000 \u20ac", "10000 to 15000 \u20ac", "15000 to 20000 \u20ac", "More than 20000 \u20ac"], "filterOnEveryClick": true, "icon": "fa-filter", "openPopupOnHover": false}
+            ).addTo(map_3d81440dc27ceb960a4595297f1c34a3);
+        
+    
+            var tile_layer_3398a3ace792613396f0e6829a1c0ce7 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_2d1a844eb140f72e2f07ea65477894f8 = new L.Control.MiniMap(
+                tile_layer_3398a3ace792613396f0e6829a1c0ce7,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomleft", "toggleDisplay": true, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_3d81440dc27ceb960a4595297f1c34a3.addControl(mini_map_2d1a844eb140f72e2f07ea65477894f8);
+        
+</script>
+</html>

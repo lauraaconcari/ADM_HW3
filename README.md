@@ -72,7 +72,7 @@ Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–
     Build a novel scoring metric to rank MSc degrees based on user queries, considering multiple variables beyond the description field.
     
     ### 4. Visualizing the most relevant MSc degrees
-    Create a map showcasing MSc degree courses based on the defined score in point 3. The map should provide insights into the location (city and country) of each course, along with a representation of associated fees.
+    Create a map showcasing MSc degree courses based on the defined score in point 3. We used our engine to query the phrase ```data science```. The top 1000 results based on the predefined score in question 3 were returned. We used geopandas and geopy libraries to encode the results into geo-referenced data. The folium library is also used to visualize this data. The map provides insights into the name of each course, location (city and country), a representation of associated fees (using a range of coloured symbols), and a filtering gadget based on the ranges in fees. The map is saved as ```interactive_map.html``` in the repository so that it can be downloaded and opened on any web browser.
 
     <a id="command-line-question"></a>
     ### 6. Command Line Question

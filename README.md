@@ -1,5 +1,5 @@
 # ADM_HW3 - Master's Degrees from all over!
-Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–2024. Homewok 3
+Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–2024. [Homewok 3](https://github.com/Sapienza-University-Rome/ADM/tree/master/2023/Homework_3)
 ---
 
 ## Team members
@@ -11,40 +11,40 @@ Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–
 ## Contents
 * __`main.ipynb`__: 
 	> A Jupyter notebook which provides the solutions to all research questions.
+	> In some cases github is not able to render the interactive map in the RQ4. [Here](https://nbviewer.org/github/lauraaconcari/ADM_HW3/blob/main/main.ipynb) is a rendered version of `main.ipynb` to view the working map.
 
     ### 1. Data collection
 
-    In this response, we focus on implementing a data collection process to build a corpus of documents centered around master's degree programs. The approach involves breaking down the tasks into distinct modules, such as crawler.py for web scraping master's degree information, ```parser.py``` for extracting relevant details, and ```engine.py``` for orchestrating the entire process. 
+    In this response, we focus on implementing a data collection process to build a corpus of documents centered around master's degree programs. The approach involves breaking down the tasks into distinct modules, such as ```scrape_urls.py``` and ```download_html.py``` for web scraping master's degree information, ```extract_msc_page.py``` for extracting relevant details from HTML contents, and ```engine.py``` for orchestrating the entire process. 
 
     * **Get the list of master's degree courses**
     
-        The initial phase entails navigating through master's degree courses, gathering detailed information, and subsequently retrieving the URLs associated with each course. Finally, the results are saved in a text file (.txt), with each line representing a unique URL, limited to the first 400 pages to yield 6000 unique URLs. Special attention is given to handling exceptions and creating code that is both readable and efficient.
+        The initial phase entails navigating through the website for master's degree courses and retrieving the URLs associated with each course. The results of this phase are saved in a text file (.txt), with each line representing a unique URL, limited to the first 400 pages to yield 6000 unique URLs. Special attention is given to handling exceptions and creating code that is both readable and efficient.
 
     * **Crawl master's degree pages**
 
         In this section, the focus is on crawling the master's degree pages corresponding to the URLs obtained from the first 400 pages. The process involves:
 
-        - Downloading the HTML content for each collected URL.
-        - Immediately saving the HTML of each page in a file to prevent data loss in case the program stops for any reason.
-        - Organizing the downloaded HTML pages into folders, with each folder containing the HTML of courses from a specific page in the master's program list.
+        - Downloading the HTML content of each collected URL immediately after retrieving it using ```download_html.py``` module, into a file to prevent data loss in case the program stops for any reason.
+        - Organizing the downloaded HTML pages into folders using ```create_folders.py``` module, 15 in each folder to preserve the order in which the courses appear on the scraped website.
 
     * **Parse downloaded pages** 
 
-        At this stage, all HTML documents related to the master's degree programs have been acquired, and the next step is to extract specific information. The desired information for each course and their respective formats are:
+        At this stage, all HTML documents related to the master's degree programs have been acquired, and the next step is to extract specific information by using ```extract_msc_page.py``` module. The desired information for each course with their respective formats are as follows:
 
-            Course Name
-            University 
-            Faculty 
-            Full or Part Time 
-            Short Description 
-            Start Date 
-            Fees 
-            Modality 
-            Duration 
-            City 
-            Country 
-            Presence or online modality 
-            Link to the 
+            Course Name: string;
+            University: string; 
+            Faculty: string; 
+            Full or Part Time: string; 
+            Short Description: string; 
+            Start Date: string; 
+            Fees: string; 
+            Modality: string; 
+            Duration: string; 
+            City: string; 
+            Country: string; 
+            Presence or online modality: string; 
+            Link to the course: string;
 
     ### 2. Search Engine
     * **Preprocessing the text**

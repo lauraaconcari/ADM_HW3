@@ -1,5 +1,5 @@
 # ADM_HW3 - Master's Degrees from all over!
-Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–2024. Homewok 3
+Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–2024. [Homewok 3](https://github.com/Sapienza-University-Rome/ADM/tree/master/2023/Homework_3)
 ---
 
 ## Team members
@@ -11,6 +11,7 @@ Algorithmic Methods of Data Mining (Sc.M. in Data Science) Academic year 2023–
 ## Contents
 * __`main.ipynb`__: 
 	> A Jupyter notebook which provides the solutions to all research questions.
+	> In some cases github is not able to render the interactive map in the RQ4. [Here](https://nbviewer.org/github/lauraaconcari/ADM_HW3/blob/main/main.ipynb) is a rendered version of `main.ipynb` to view the working map.
 
     ### 1. Data collection
 
